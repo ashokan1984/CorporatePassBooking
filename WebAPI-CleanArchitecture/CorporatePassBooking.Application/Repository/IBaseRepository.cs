@@ -8,8 +8,7 @@ namespace CorporatePassBooking.Application.Repository
         void Create(T entity);
         void Update(T entity);
         void Delete(T entity);
-        Task<T> Get(Guid id, CancellationToken cancellationToken);
-
+        Task<T> Get(Guid id, CancellationToken cancellationToken, params Expression<Func<T, object>>[] includes);
         Task<T> GetWithoutChangeTracking(Guid id, CancellationToken cancellationToken);
 
         Task<List<T>> GetAll(CancellationToken cancellationToken);
@@ -19,6 +18,10 @@ namespace CorporatePassBooking.Application.Repository
         Task<List<T>> GetAllNoTracking(params Expression<Func<T, object>>[] includes);
 
         Task<bool> Any(Guid id, CancellationToken cancellationToken);
+
+        Task<bool> Any(Expression<Func<T, bool>> predicate);
+
+        Task<List<T>> Get(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includes);
 
     }
 }

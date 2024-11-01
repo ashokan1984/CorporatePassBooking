@@ -17,6 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorporatePassBooking.Persis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorporatePassBooking.WebAPI", "CorporatePassBooking.WebAPI\CorporatePassBooking.WebAPI.csproj", "{81BABA4E-2CD8-4537-B980-A579D06CD399}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorporatePassBooking_UnitTest", "CorporatePassBooking_UnitTest\CorporatePassBooking_UnitTest.csproj", "{891D8B8C-70DC-48C9-BAA9-FFC3914E4B7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62934B7B-C470-4F55-82BE-2DC328587D14}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +46,10 @@ Global
 		{81BABA4E-2CD8-4537-B980-A579D06CD399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81BABA4E-2CD8-4537-B980-A579D06CD399}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81BABA4E-2CD8-4537-B980-A579D06CD399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891D8B8C-70DC-48C9-BAA9-FFC3914E4B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891D8B8C-70DC-48C9-BAA9-FFC3914E4B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891D8B8C-70DC-48C9-BAA9-FFC3914E4B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891D8B8C-70DC-48C9-BAA9-FFC3914E4B7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

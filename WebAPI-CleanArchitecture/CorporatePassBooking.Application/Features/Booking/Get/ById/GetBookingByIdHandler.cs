@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CorporatePassBooking.Application.Features.Visitor.Get.ById;
 using CorporatePassBooking.Application.Repository;
 using MediatR;
 
@@ -6,9 +7,11 @@ namespace CorporatePassBooking.Application.Features.Booking.Get.ById
 {
     public sealed class GetBookingByIdHandler(IBookingRepository bookingRepository, IMapper mapper) : IRequestHandler<GetBookingByIdRequest, GetBookingByIdResponse>
     {
-        public Task<GetBookingByIdResponse> Handle(GetBookingByIdRequest request, CancellationToken cancellationToken)
+        public async Task<GetBookingByIdResponse> Handle(GetBookingByIdRequest request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var booking = await bookingRepository.Get(request.ID, cancellationToken);
+            return mapper.Map<GetBookingByIdResponse>(booking);
         }
+
     }
 }

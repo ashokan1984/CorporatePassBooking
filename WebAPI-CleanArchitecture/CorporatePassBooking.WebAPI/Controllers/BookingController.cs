@@ -8,6 +8,8 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using CorporatePassBooking.Application.Features.Booking.Update;
 using CorporatePassBooking.Application.Features.Booking.Get.All;
+using CorporatePassBooking.Application.Features.Booking.Get.ById;
+using CorporatePassBooking.Application.Features.Booking.Get.ByVisitorId;
 
 namespace CorporatePassBooking.WebAPI.Controllers
 {
@@ -30,18 +32,27 @@ namespace CorporatePassBooking.WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<GetAllVisitorsResponse>> GetAll([FromQuery] GetAllBookingsRequest request,
+        public async Task<ActionResult<GetAllBookingsResponse>> GetAll([FromQuery] GetAllBookingsRequest request,
             CancellationToken cancellationToken)
         {
             var response = await mediator.Send(request, cancellationToken);
             return Ok(response);
         }
 
-        [HttpGet("{visitorId}")]
-        public async Task<ActionResult<GetVisitorByIdResponse>> GetById(Guid visitorId,
+        [HttpGet("{bookingId}")]
+        public async Task<ActionResult<GetBookingByIdResponse>> GetById(Guid bookingId,
             CancellationToken cancellationToken)
         {
-            var request = new GetVisitorByIdRequest(visitorId);
+            var request = new GetBookingByIdRequest(bookingId);
+            var response = await mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpGet("{visitorId}")]
+        public async Task<ActionResult<GetBookingByIdResponse>> GetByVisitorId(Guid visitorId,
+            CancellationToken cancellationToken)
+        {
+            var request = new GetBookingByVisitorIdRequest(visitorId);
             var response = await mediator.Send(request, cancellationToken);
             return Ok(response);
         }

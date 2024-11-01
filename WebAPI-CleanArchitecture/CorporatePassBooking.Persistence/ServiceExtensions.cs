@@ -1,6 +1,7 @@
 ﻿using CorporatePassBooking.Application.Repository;
 using CorporatePassBooking.Persistence.Context;
 using CorporatePassBooking.Persistence.Repository;
+using CorporatePassBooking.Persistence.Repository.Facility;
 using CorporatePassBooking.Persistence.Repository.Visitor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
 
 namespace CorporatePassBooking.Application.Features.Booking.Get.ByVisitorId
 {
-    public class GetBookingByVisitorIdMapper
+    public class GetBookingByVisitorIdMapper : Profile
     {
+        public GetBookingByVisitorIdMapper()
+        {
+            CreateMap<Domain.Entities.Booking, GetBookingByVisitorIdResponse>()
+                    .ForMember(mem => mem.Visitor, opt => opt.MapFrom(s => s.Visitor))
+                    .ForMember(mem => mem.Facility, opt => opt.MapFrom(s => s.Facility));
+        }
     }
 }

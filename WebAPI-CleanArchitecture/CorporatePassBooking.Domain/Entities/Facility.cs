@@ -6,7 +6,10 @@ namespace CorporatePassBooking.Domain.Entities
     {
         public string Name { get; set; }
         public string Type { get; set; }
-        public int Capacity { get; set; }
+        public int TotalCapacity { get; set; }
+
+        public int AvailableCapacity { get; set; }
+
         public string Location { get; set; }
 
         public ICollection<Amenity> Amenities { get; set; }

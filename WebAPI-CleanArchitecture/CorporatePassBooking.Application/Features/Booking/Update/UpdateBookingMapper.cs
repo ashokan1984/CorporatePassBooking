@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using CorporatePassBooking.Domain.Entities;
 
 namespace CorporatePassBooking.Application.Features.Booking.Update
 {
-    public class UpdateBookingMapper
+    public class UpdateBookingMapper : Profile
     {
+        public UpdateBookingMapper()
+        {
+            CreateMap<UpdateBookingRequest, Domain.Entities.Booking>()
+                .ForMember(member => member.Status, map => map.MapFrom(u => BookingStatusEnum.Confirmed));
+            CreateMap<Domain.Entities.Booking, UpdateBookingResponse>();
+        }
     }
 }

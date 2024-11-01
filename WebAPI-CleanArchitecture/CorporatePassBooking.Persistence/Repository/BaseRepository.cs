@@ -50,14 +50,42 @@ namespace CorporatePassBooking.Persistence.Repository
             Context.Update(entity);
         }
 
-        public virtual Task<T> Get(Guid id, CancellationToken cancellationToken)
+        public virtual Task<T> Get(Guid id, CancellationToken cancellationToken, params Expression<Func<T, object>>[] includes)
         {
-            return Context.Set<T>().FirstOrDefaultAsync(x => x.ID == id, cancellationToken);
+            IQueryable<T> query = Context.Set<T>();
+            if (includes.Any())
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+
+            return query.FirstOrDefaultAsync(x => x.ID == id, cancellationToken);
         }
 
         public virtual Task<bool> Any(Guid id, CancellationToken cancellationToken)
         {
             return Context.Set<T>().AnyAsync(x => x.ID == id, cancellationToken);
+        }
+
+        public async Task<bool> Any(Expression<Func<T, bool>> predicate)
+        {
+            IQueryable<T> query = Context.Set<T>();
+            return await query.AnyAsync(predicate);
+        }
+
+        public async Task<List<T>> Get(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = Context.Set<T>();
+            if (includes.Any())
+            {
+                foreach (var include in includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+            return await query.Where(predicate).ToListAsync();
         }
 
         public virtual Task<T> GetWithoutChangeTracking(Guid id, CancellationToken cancellationToken)

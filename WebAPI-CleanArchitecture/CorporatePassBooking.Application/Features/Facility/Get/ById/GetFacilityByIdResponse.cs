@@ -7,5 +7,7 @@
         public int Capacity { get; set; }
         public string Location { get; set; }
 
+        public ICollection<string> Amenities { get; set; }
+
     }
 }

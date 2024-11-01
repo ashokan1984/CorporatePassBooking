@@ -8,8 +8,8 @@ namespace CorporatePassBooking.Application.Features.Booking.Get.All
     {
         public async Task<List<GetAllBookingsResponse>> Handle(GetAllBookingsRequest request, CancellationToken cancellationToken)
         {
-            var visitors = await bookingRepository.GetAllNoTracking(e => e.Facility, y => y.Visitor, a=> a.Facility.Amenities);
-            return mapper.Map<List<GetAllBookingsResponse>>(visitors);
+            var bookings = await bookingRepository.GetAllNoTracking(e => e.Facility, y => y.Visitor, a=> a.Facility.Amenities);
+            return mapper.Map<List<GetAllBookingsResponse>>(bookings);
         }
     }
 }

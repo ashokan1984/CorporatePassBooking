@@ -2,5 +2,5 @@
 
 namespace CorporatePassBooking.Application.Features.Booking.Get.ById
 {
-    public sealed record GetBookingByIdRequest(Guid ID) : IRequest<GetBookingByIdResponse>;
+    public sealed record GetBookingByIdRequest(Guid ID) : IRequest<GetBookingByIdResponse>;   
 }
