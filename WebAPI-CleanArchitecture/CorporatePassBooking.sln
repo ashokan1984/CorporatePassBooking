@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{388349DF-7A11-47D7-8412-8C8E79088D34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{7A62318F-0DFF-4469-B839-8334F2976C97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{8BBC39D6-D1FC-4922-BB8B-4E80FF24A8B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorporatePassBooking.Application", "CorporatePassBooking.Application\CorporatePassBooking.Application.csproj", "{7DC4750A-C7B2-48BB-9056-3F507F169CF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorporatePassBooking.Domain", "CorporatePassBooking.Domain\CorporatePassBooking.Domain.csproj", "{F5C9D785-96CD-4344-B582-409C390D05FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorporatePassBooking.Persistence", "CorporatePassBooking.Persistence\CorporatePassBooking.Persistence.csproj", "{2C4FC32D-DF30-4FA8-A90F-A6BC3CBAE257}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorporatePassBooking.WebAPI", "CorporatePassBooking.WebAPI\CorporatePassBooking.WebAPI.csproj", "{81BABA4E-2CD8-4537-B980-A579D06CD399}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DC4750A-C7B2-48BB-9056-3F507F169CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC4750A-C7B2-48BB-9056-3F507F169CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC4750A-C7B2-48BB-9056-3F507F169CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC4750A-C7B2-48BB-9056-3F507F169CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C9D785-96CD-4344-B582-409C390D05FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C9D785-96CD-4344-B582-409C390D05FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C9D785-96CD-4344-B582-409C390D05FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C9D785-96CD-4344-B582-409C390D05FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C4FC32D-DF30-4FA8-A90F-A6BC3CBAE257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C4FC32D-DF30-4FA8-A90F-A6BC3CBAE257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C4FC32D-DF30-4FA8-A90F-A6BC3CBAE257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C4FC32D-DF30-4FA8-A90F-A6BC3CBAE257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81BABA4E-2CD8-4537-B980-A579D06CD399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81BABA4E-2CD8-4537-B980-A579D06CD399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81BABA4E-2CD8-4537-B980-A579D06CD399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81BABA4E-2CD8-4537-B980-A579D06CD399}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DC4750A-C7B2-48BB-9056-3F507F169CF2} = {388349DF-7A11-47D7-8412-8C8E79088D34}
+		{F5C9D785-96CD-4344-B582-409C390D05FC} = {388349DF-7A11-47D7-8412-8C8E79088D34}
+		{2C4FC32D-DF30-4FA8-A90F-A6BC3CBAE257} = {7A62318F-0DFF-4469-B839-8334F2976C97}
+		{81BABA4E-2CD8-4537-B980-A579D06CD399} = {8BBC39D6-D1FC-4922-BB8B-4E80FF24A8B9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BC4E7FF-D84C-4BFD-A57B-1A3ED5FA587D}
+	EndGlobalSection
+EndGlobal
