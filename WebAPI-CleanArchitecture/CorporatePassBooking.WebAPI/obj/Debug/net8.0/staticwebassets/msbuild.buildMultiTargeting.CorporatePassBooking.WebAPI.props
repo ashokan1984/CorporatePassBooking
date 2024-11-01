@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CorporatePassBooking.WebAPI.props" />
+</Project>

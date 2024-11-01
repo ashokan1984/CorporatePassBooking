@@ -1,0 +1,16 @@
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\bin\Debug\net8.0\CorporatePassBooking.Application.deps.json
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\bin\Debug\net8.0\CorporatePassBooking.Application.dll
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\bin\Debug\net8.0\CorporatePassBooking.Application.pdb
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\bin\Debug\net8.0\CorporatePassBooking.Domain.dll
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\bin\Debug\net8.0\CorporatePassBooking.Domain.pdb
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\CorporatePassBooking.Application.csproj.AssemblyReference.cache
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\CorporatePassBooking.Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\CorporatePassBooking.Application.AssemblyInfoInputs.cache
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\CorporatePassBooking.Application.AssemblyInfo.cs
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\CorporatePassBooking.Application.csproj.CoreCompileInputs.cache
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\CorporatePassBooking.Application.sourcelink.json
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\Corporat.6BBF90EF.Up2Date
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\CorporatePassBooking.Application.dll
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\refint\CorporatePassBooking.Application.dll
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\CorporatePassBooking.Application.pdb
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Application\obj\Debug\net8.0\ref\CorporatePassBooking.Application.dll

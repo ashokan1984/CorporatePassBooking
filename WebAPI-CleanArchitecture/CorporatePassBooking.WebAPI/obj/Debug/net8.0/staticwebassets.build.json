@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gL4wxWyXvd7MKy0li2AgwuZ2mUEpFqAwzy1h9IqmiMA=",
+  "Source": "CorporatePassBooking.WebAPI",
+  "BasePath": "_content/CorporatePassBooking.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

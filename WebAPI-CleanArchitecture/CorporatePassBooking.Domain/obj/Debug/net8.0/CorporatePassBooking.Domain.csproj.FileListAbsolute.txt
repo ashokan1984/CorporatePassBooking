@@ -1,0 +1,12 @@
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\bin\Debug\net8.0\CorporatePassBooking.Domain.deps.json
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\bin\Debug\net8.0\CorporatePassBooking.Domain.dll
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\bin\Debug\net8.0\CorporatePassBooking.Domain.pdb
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\obj\Debug\net8.0\CorporatePassBooking.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\obj\Debug\net8.0\CorporatePassBooking.Domain.AssemblyInfoInputs.cache
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\obj\Debug\net8.0\CorporatePassBooking.Domain.AssemblyInfo.cs
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\obj\Debug\net8.0\CorporatePassBooking.Domain.csproj.CoreCompileInputs.cache
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\obj\Debug\net8.0\CorporatePassBooking.Domain.sourcelink.json
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\obj\Debug\net8.0\CorporatePassBooking.Domain.dll
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\obj\Debug\net8.0\refint\CorporatePassBooking.Domain.dll
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\obj\Debug\net8.0\CorporatePassBooking.Domain.pdb
+F:\CorporatePassBooking\WebAPI-CleanArchitecture\CorporatePassBooking.Domain\obj\Debug\net8.0\ref\CorporatePassBooking.Domain.dll
