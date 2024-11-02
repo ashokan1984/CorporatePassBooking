@@ -56,7 +56,7 @@ namespace CorporatePassBooking_UnitTest
                 {
                     Name = "Night Safari",
                     Type = "Animal Seeing",
-                    Capacity = 50,
+                    TotalCapacity = 50,
                     Location = "Singapore",
                     Amenities = amenities
                 },
@@ -94,7 +94,7 @@ namespace CorporatePassBooking_UnitTest
             Assert.NotNull(result.Facility);
             Assert.Equal("Night Safari", result.Facility.Name);
             Assert.Equal("Animal Seeing", result.Facility.Type);
-            Assert.Equal(50, result.Facility.Capacity);
+            Assert.Equal(50, result.Facility.TotalCapacity);
             Assert.Equal("Singapore", result.Facility.Location);
             Assert.Equal(amenities, result.Facility.Amenities);
 

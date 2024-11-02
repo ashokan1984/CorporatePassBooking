@@ -9,7 +9,16 @@ builder.Services.ConfigurePersistence(builder.Configuration);
 builder.Services.ConfigureApplication();
 
 builder.Services.ConfigureApiBehavior();
-builder.Services.ConfigureCorsPolicy();
+
+// CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder => builder
+            .AllowAnyOrigin()  // Allows any origin
+            .AllowAnyMethod()  // Allows any HTTP method
+            .AllowAnyHeader()); // Allows any HTTP header
+});
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -25,6 +34,6 @@ dataContext?.Database.EnsureCreated();
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseErrorHandler();
-app.UseCors();
+app.UseCors("AllowAll");
 app.MapControllers();
 app.Run();

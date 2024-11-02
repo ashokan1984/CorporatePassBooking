@@ -8,7 +8,7 @@ namespace CorporatePassBooking.Application.Features.Facility.Get.ById
     {
         public async Task<GetFacilityByIdResponse> Handle(GetFacilityByIdRequest request, CancellationToken cancellationToken)
         {
-            var visitors = await facilityRepository.Get(request.Id, cancellationToken);
+            var visitors = await facilityRepository.Get(request.Id, cancellationToken, x => x.Amenities);
             return mapper.Map<GetFacilityByIdResponse>(visitors);
         }
     }
