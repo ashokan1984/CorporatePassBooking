@@ -1,0 +1,873 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "CorporatePassBooking.WebAPI",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/Booking/Create": {
+            "post": {
+                "tags": [
+                    "Booking"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddBookingRequest"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddBookingRequest"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddBookingRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddBookingResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddBookingResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddBookingResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Booking/Update": {
+            "put": {
+                "tags": [
+                    "Booking"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateBookingRequest"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateBookingRequest"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateBookingRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UpdateVisitorResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UpdateVisitorResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UpdateVisitorResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Booking/GetAll": {
+            "get": {
+                "tags": [
+                    "Booking"
+                ],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "$ref": "#/components/schemas/GetAllBookingsRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetAllBookingsResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetAllBookingsResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetAllBookingsResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Booking/GetById/{bookingId}": {
+            "get": {
+                "tags": [
+                    "Booking"
+                ],
+                "parameters": [
+                    {
+                        "name": "bookingId",
+                        "in": "path",
+                        "required": true,
+                        "style": "simple",
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetBookingByIdResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetBookingByIdResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetBookingByIdResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Booking/GetByVisitorId/{visitorId}": {
+            "get": {
+                "tags": [
+                    "Booking"
+                ],
+                "parameters": [
+                    {
+                        "name": "visitorId",
+                        "in": "path",
+                        "required": true,
+                        "style": "simple",
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetBookingByIdResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetBookingByIdResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetBookingByIdResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Facility/GetAll": {
+            "get": {
+                "tags": [
+                    "Facility"
+                ],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "$ref": "#/components/schemas/GetAllFacilitiesRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetAllFacilitiesResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetAllFacilitiesResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetAllFacilitiesResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Facility/GetById/{facilityId}": {
+            "get": {
+                "tags": [
+                    "Facility"
+                ],
+                "parameters": [
+                    {
+                        "name": "facilityId",
+                        "in": "path",
+                        "required": true,
+                        "style": "simple",
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetFacilityByIdResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetFacilityByIdResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetFacilityByIdResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Facility/Create": {
+            "post": {
+                "tags": [
+                    "Facility"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddFacilityRequest"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddFacilityRequest"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddFacilityRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddFacilityResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddFacilityResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddFacilityResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Visitor/Create": {
+            "post": {
+                "tags": [
+                    "Visitor"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddVisitorRequest"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddVisitorRequest"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddVisitorRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddVisitorResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddVisitorResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddVisitorResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Visitor/Update": {
+            "put": {
+                "tags": [
+                    "Visitor"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateVisitorRequest"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateVisitorRequest"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateVisitorRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UpdateVisitorResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UpdateVisitorResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UpdateVisitorResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Visitor/GetAll": {
+            "get": {
+                "tags": [
+                    "Visitor"
+                ],
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "$ref": "#/components/schemas/GetAllVisitorsRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetAllVisitorsResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetAllVisitorsResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetAllVisitorsResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Visitor/GetById/{visitorId}": {
+            "get": {
+                "tags": [
+                    "Visitor"
+                ],
+                "parameters": [
+                    {
+                        "name": "visitorId",
+                        "in": "path",
+                        "required": true,
+                        "style": "simple",
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetVisitorByIdResponse"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetVisitorByIdResponse"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetVisitorByIdResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AddBookingRequest": {
+                "type": "object",
+                "properties": {
+                    "facilityId": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "visitorId": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "quantity": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "bookingDateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "AddBookingResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "AddFacilityRequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "type": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "capacity": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "location": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "amenities": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "AddFacilityResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "AddVisitorRequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "email": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "phoneNumber": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "AddVisitorResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GetAllBookingsRequest": {
+                "type": "object",
+                "additionalProperties": false
+            },
+            "GetAllBookingsResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "facilityId": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "visitorId": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "quantity": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "bookingDateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "facility": {
+                        "$ref": "#/components/schemas/GetAllFacilitiesResponse"
+                    },
+                    "visitor": {
+                        "$ref": "#/components/schemas/GetVisitorByIdResponse"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GetAllFacilitiesRequest": {
+                "type": "object",
+                "additionalProperties": false
+            },
+            "GetAllFacilitiesResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "type": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "capacity": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "location": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "amenities": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GetAllVisitorsRequest": {
+                "type": "object",
+                "additionalProperties": false
+            },
+            "GetAllVisitorsResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "email": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "phoneNumber": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GetBookingByIdResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "facilityId": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "visitorId": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "quantity": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "bookingDateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "facility": {
+                        "$ref": "#/components/schemas/GetFacilityByIdResponse"
+                    },
+                    "visitor": {
+                        "$ref": "#/components/schemas/GetVisitorByIdResponse"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GetFacilityByIdResponse": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "type": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "capacity": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "location": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "amenities": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "GetVisitorByIdResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "email": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "phoneNumber": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UpdateBookingRequest": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "facilityId": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "visitorId": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "quantity": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "bookingDateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UpdateVisitorRequest": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "email": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "phoneNumber": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UpdateVisitorResponse": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                },
+                "additionalProperties": false
+            }
+        }
+    }
+}
