@@ -5,7 +5,7 @@ using CorporatePassBooking.Application.Common.Exceptions;
 namespace CorporatePassBooking.Application.Common.Behaviors
 {
     public sealed class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : IRequest<TResponse>
+        where TRequest : IRequest<TResponse>
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
 
@@ -29,7 +29,8 @@ namespace CorporatePassBooking.Application.Common.Behaviors
                 .ToArray();
 
             if (errors.Any())
-                throw new BadRequestException(errors);
+                // Instead of passing the array directly, we join the errors into a single string or modify your BadRequestException
+                throw new BadRequestException(string.Join(", ", errors)); // Join errors into a single string
 
             return await next();
         }

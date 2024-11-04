@@ -16,7 +16,7 @@ namespace CorporatePassBooking.Application.Features.Visitor.Add
                 .WithMessage("Type is required.")
                 .MaximumLength(50);
 
-            RuleFor(x => x.Capacity)
+            RuleFor(x => x.TotalCapacity)
                 .GreaterThan(0)
                 .WithMessage("Capacity must be greater than zero.");
 
